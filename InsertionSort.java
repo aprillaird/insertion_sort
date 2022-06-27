@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class InsertionSort {
 	public static void main(String[] args) {
-		int[] list = new int[10];
+		int[] list = new int[100];
 		for (int i = 0; i < list.length; i++) {
 		    list[i]=ThreadLocalRandom.current().nextInt(1,1000000);
 		}
@@ -16,12 +16,14 @@ public class InsertionSort {
 		
 		// Call the insertion sort method, print the list
 		insertionSort(list);
-		for (int i = 0; i < list.length; i++) {
-			System.out.println(list[i]);
-		}
+		
 		// Get the end time
 		long end = System.currentTimeMillis();
 		
+		for (int i = 0; i < list.length; i++) {
+			System.out.println(list[i]);
+		}
+				
 		// Amount of time
 		System.out.println("The insertion sort took " + (end - start) + " milliseconds.");
 	}
